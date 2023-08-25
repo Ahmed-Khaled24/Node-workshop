@@ -1,0 +1,26 @@
+<h1>JS Non-Blocking Example</h1>
+<p>
+	This web page demonstrates how JS is non-blocking and how it can handle multiple tasks without
+	blocking the main thread.
+</p>
+<button id="compute">Start Computation</button>
+<button id="alert">Show Alert Message</button>
+<div id="result"></div>
+<script>
+	function longComputation() {
+		console.log("Computation started");
+		setTimeout(() => {
+			let number = Math.floor(Math.random() * 100) + 1;
+			result.innerHTML = `The result of the computation is ${number}`;
+			console.log("Computation is done");
+		}, 5000);
+	}
+	function showAlert() {
+		alert("Hello, world!");
+	}
+	const compute = document.getElementById("compute");
+	const alertBtn = document.getElementById("alert");
+	const result = document.getElementById("result");
+	compute.addEventListener("click", longComputation);
+	alertBtn.addEventListener("click", showAlert);
+</script>

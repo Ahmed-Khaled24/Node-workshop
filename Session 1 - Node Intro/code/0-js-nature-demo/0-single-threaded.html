@@ -1,0 +1,20 @@
+<h1>JS Single-Threaded Example</h1>
+<p>This web page demonstrates how JS is single-threaded and how it can cause blocking problems.</p>
+<button id="loop">Start Blocking Loop</button>
+<button id="alert">Show Alert Message</button>
+<script>
+	function longRunningOperation() {
+		console.log("Loop started");
+		for (let i = 0; i < 1e10; i++) {
+			Math.sqrt(i);
+		}
+		console.log("Loop is done");
+	}
+	function showAlert() {
+		alert("Hello, world!");
+	}
+	const loopBtn = document.getElementById("loop");
+	const alertBtn = document.getElementById("alert");
+	loopBtn.addEventListener("click", longRunningOperation);
+	alertBtn.addEventListener("click", showAlert);
+</script>
