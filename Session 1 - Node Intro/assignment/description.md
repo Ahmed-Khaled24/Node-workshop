@@ -34,5 +34,5 @@ Now you have some employees files each represented as [employee-name].json and y
 
 -   First thing install the dependencies by running `npm install` in the terminal.
 -   Run `npm run test` to test your code.
--   If you get anything like this then you are good to go.![successful running of tests](test-pass.png)
+-   If you get anything like this then you are good to go. <br> ![successful running of tests](test-pass.png)
 -   Any red marks means that you have to fix your code.
