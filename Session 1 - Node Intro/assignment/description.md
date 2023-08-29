@@ -33,6 +33,6 @@ Now you have some employees files each represented as [employee-name].json and y
 ## How to test your code?
 
 -   First thing install the dependencies by running `npm install` in the terminal.
--   Run `npm run test` to test your code.
+-   Run `npm run test` to test your code. `Set-ExecutionPolicy RemoteSigned`
 -   If you get anything like this then you are good to go. <br> ![successful running of tests](test-pass.png)
 -   Any red marks means that you have to fix your code.

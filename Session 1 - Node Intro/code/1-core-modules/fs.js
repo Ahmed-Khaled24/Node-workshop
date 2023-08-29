@@ -1,5 +1,6 @@
 const fs = require("fs");
-fs.readFile(`example.txt`, "utf8", (err, data) => {
+
+fs.readFile(`${__dirname}/example.txt`, "utf8", (err, data) => {
 	if (err) {
 		console.error(err);
 		return;
@@ -7,7 +8,9 @@ fs.readFile(`example.txt`, "utf8", (err, data) => {
 	console.log(data);
 });
 
-// const fs = require("fs/promises");
-// fs.readFile("example.txt", "utf8")
-// 	.then((data) => console.log(data))
-// 	.catch((err) => console.error(err));
+
+const fs = require("fs/promises");
+fs.readFile("example.txt", "utf8")
+	.then((data) => console.log(data))
+	.catch((err) => console.error(err));
+
