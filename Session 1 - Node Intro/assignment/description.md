@@ -24,7 +24,7 @@ Now you have some employees files each represented as [employee-name].json and y
 ```js
 {
     name: "Mohamed",
-    costPerHour: 62.5
+    cost: 62.5
 }
 ```
 
