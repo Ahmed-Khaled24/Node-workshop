@@ -1,12 +1,20 @@
-/**
- * This function calculates the cost of an employee based on the data in its file
- * @param {string} filePath - path to the employee data file
- * @returns {{name: string, cost: number}} - the name and cost of the employee
- */
+const fs = require("fs/promises");
 
-function costCalculator(filePath) {
-	// TODO: write your code here
-	// DON'T TOUCH ANYTHING OUTSIDE THIS FUNCTION
+async function costCalculator(filePath) {
+	let data = await readFileAsync(filePath);
+	console.log(data);
+}
+
+function readFileAsync(filePath) {
+	return new Promise((resolve, reject) => {
+		fs.readFile(filePath, "utf8", (err, data) => {
+			if (err) {
+				reject(err);
+				return;
+			}
+			resolve(data);
+		});
+	});
 }
 
 module.exports = {
