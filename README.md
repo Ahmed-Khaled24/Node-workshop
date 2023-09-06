@@ -44,3 +44,4 @@
 | Maximilian Schwarzmüller | https://www.udemy.com/user/maximilian-schwarzmuller/ |
 | Andrei Neagoie           | https://www.udemy.com/user/andrei-neagoie/           |
 | Colt Steele              | https://www.udemy.com/user/coltsteele/               |
+| Jonas Schmedtmann        | https://www.udemy.com/user/jonasschmedtmann/         |
