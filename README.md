@@ -6,7 +6,7 @@
 
 -   Session 1: Introduction to Node.js.
 -   Session 2: HTTP protocol, REST API, and Express.js
--   Session 3: MVC pattern, MongoDB, and Mongoose
+-   Session 3: MVC pattern and MongoDB
 -   Session 4: Authentication and Security
 -   Session 5: Testing and Deployment
 
@@ -24,6 +24,7 @@
 | Popular web attacks                     | https://www.youtube.com/watch?v=pdC3H8SX-F4&list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv&index=40&pp=iAQB |
 | CORS                                    | https://www.youtube.com/watch?v=Ka8vG5miErk&list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv&index=11         |
 | Introduction to jest for unit testing   | https://www.youtube.com/watch?v=7r4xVDI2vho                                                          |
+| Cloud course (AWS)                      | https://www.youtube.com/playlist?list=PLOoZRfEtk6kWSM_l9xMjDh-_MJXl03-pf                             |
 
 ### Youtube channels you must follow:
 
