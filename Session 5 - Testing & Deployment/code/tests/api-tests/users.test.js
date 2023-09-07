@@ -5,8 +5,10 @@ const superTest = require("supertest");
 const app = require("../../app");
 const { dbAddNewUser } = require("../../models/users.model");
 const issueJWT = require("../../utils/issueJWT");
+const { dbAddNewSecret } = require("../../models/secrets.model");
 
 let token = null;
+let secretId = null;
 
 beforeAll(async () => {
 	await connectMongoDB();
@@ -19,6 +21,13 @@ beforeAll(async () => {
 	const { insertedId } = await dbAddNewUser(validUser);
 	validUser._id = insertedId;
 	token = issueJWT(validUser);
+
+	const secret = {
+		title: "test secret",
+		description: "test secret description",
+	};
+	const response = await dbAddNewSecret(secret);
+	secretId = response.insertedId;
 });
 
 afterAll(async () => {
@@ -70,6 +79,15 @@ describe("get All secrets", () => {
 	test("get all secrets with valid token", async () => {
 		const response = await superTest(app)
 			.get("/secrets")
+			.set("Authorization", `Bearer ${token}`);
+		expect(response.status).toBe(200);
+	});
+});
+
+describe("delete secret", () => {
+	test("delete secret with valid token", async () => {
+		const response = await superTest(app)
+			.delete(`/secrets/${secretId}`)
 			.set("Authorization", `Bearer ${token}`);
 		expect(response.status).toBe(200);
 	});
