@@ -5,14 +5,7 @@ const passport = require("passport");
 
 const authRouter = Router();
 
-authRouter.post(
-	"/login",
-	// passport.authenticate("local", {
-	// 	successRedirect: "login/success",
-	// 	failureRedirect: "login/failed",
-	// }) // Comment this when JWT
-	jwtLogin
-);
+authRouter.post("/login", jwtLogin);
 authRouter.post("/signup", addNewUser);
 authRouter.get("/logout", logout);
 authRouter.get("/login/success", (req, res) => {

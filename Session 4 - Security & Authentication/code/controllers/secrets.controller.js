@@ -5,6 +5,7 @@ const { dbGetAllSecrets, dbAddNewSecret, dbDeleteSecretById } = require("../mode
  * to get all secrets.
  */
 async function getAllSecrets(req, res) {
+	console.log(req.user);
 	try {
 		const secrets = await dbGetAllSecrets();
 		res.json({
